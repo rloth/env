@@ -1,0 +1,160 @@
+TERM xterm
+
+# Attribute codes:
+# 00 none 01 bold 04 underscore 05 blink 07 reverse 08 concealed
+# Text color codes:
+# 30 black 31 red 32 green 33 yellow 34 blue 35 magenta 36 cyan 37 white
+# Background color codes:
+# 40 black 41 red 42 green 43 yellow 44 blue 45 magenta 46 cyan 47 white
+
+
+NORMAL 00	# global default, although everything should be something.
+FILE 00		# normal file
+DIR 01;33	# directory
+LINK 01;36	# symbolic link.  (If you set this to 'target' instead of a
+		    # numerical value, the color is as for the file pointed to.)
+FIFO 01;35	# pipe
+SOCK 01;35	# socket
+DOOR 01;35	# door
+BLK 40;33;01	# block device driver
+CHR 40;33;01	# character device driver
+ORPHAN 40;31;01 # symlink to nonexistent file, or non-stat'able file
+SETUID 37;41	# file that is setuid (u+s)
+SETGID 30;43	# file that is setgid (g+s)
+STICKY_OTHER_WRITABLE 01;33 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 01;33 # dir that is other-writable (o+w) and not sticky
+STICKY 01;33	# dir with the sticky bit set (+t) and not other-writable
+
+
+# j'enlève EXEC car windows met presque tout en executable
+# du coup la couleur n'est plus très pertinente
+# EXEC 01;32
+
+# VERT : scripts et bin even if no +x
+.sh  01;32
+.csh 01;32
+.pl 01;32
+.py 01;32
+.c 00;32
+.scala 00;32
+.exe 01;32
+.com 01;32
+.bat 01;32
+#.js 01;32
+
+# VERT sombre: js
+.js 02;32
+
+############
+# mes divers : vraiment un peu bazar car va avec une modif des couleurs de la fenêtre cmd
+
+
+# pas de couleurs actuellement
+#.dtd 02;32
+#.class 02;32
+#.ipr 02;32
+#.iws 02;32
+#.rmp 02;32
+#.matr 02;32
+#.aam 02;32
+#.btm 02;32
+#.ini 02;32
+
+# orange
+# fichiers office, ooffice et tableaux
+.doc 00;33
+.docx 00;33
+.ppt 00;33
+.pptx 00;33
+.odt 00;33
+.odf 00;33
+
+# bleu aigue-marine tableaux pour échange
+.sql 01;36
+.xls 00;33
+.xlsx 00;33
+.ods 00;33
+.csv 00;33
+.tab 00;33
+
+# bleu foncé: tableaux perso pour dev
+.tsv 00;34
+.ls 00;34
+.ls1 00;34
+.ls2 00;34
+.ls3 00;34
+
+# bleu : fichiers texte
+.tag 00;34
+.lem 00;34
+.log 00;34
+.sign 00;34
+
+.ac 00;34
+
+.txt 01;34
+.md 01;34
+.utf 01;34
+.iso 01;34
+.dico 01;34
+.pdf 01;34
+.xml 01;34
+
+.seq 01;34
+.arb 01;34
+
+# magenta : habituellement image, mais pour nous plutot webdocs
+.html 01;35
+.htm 01;35
+.php 01;35
+.svg 01;35
+.css 01;35
+
+
+ # rouge bold (archives spéciales)
+.jar 48;31
+.jar 48;31
+.sign 48;31
+
+ # archives or compressed (red)
+.tar 01;31
+.tgz 01;31
+.tar.gz 01;31
+.svgz 01;31
+.arj 01;31
+.taz 01;31
+.lzh 01;31
+.lzma 01;31
+.zip 01;31
+.z   01;31
+.Z   01;31
+.dz  01;31
+.gz  01;31
+.bz2 01;31
+.bz  01;31
+.tbz2 01;31
+.tz  01;31
+.deb 01;31
+.rpm 01;31
+.rar 01;31
+.ace 01;31
+.zoo 01;31
+.cpio 01;31
+.7z  01;31
+.rz  01;31
+
+# GRIS-BLEU
+# image formats
+.jpg 00;35
+.jpeg 00;35
+.gif 00;35
+.bmp 00;35
+.pbm 00;35
+.pgm 00;35
+.ppm 00;35
+.tga 00;35
+.xbm 00;35
+.xpm 00;35
+.tif 00;35
+.tiff 00;35
+.png 00;35

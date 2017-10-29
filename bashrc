@@ -30,6 +30,9 @@ alias dockps="docker ps -a --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'"
 # pour toute ligne de texte, les octets réellement enregistrés
 alias charinfo="od -ctx1"
 
+alias L2U='iconv -f iso-8859-1 -t utf-8'
+
+alias U2L='iconv -f utf-8 -t iso-8859-1'
 # translittération et décompression pdf
 alias pdftruc='pdftk - output - uncompress | tr "[\000-\011\013-\037\177-\377]" "²"'
 
@@ -166,3 +169,9 @@ alias cgoban="java -jar /home/romain/zmine/gamez/cgoban.jar"
 
 # remove newlines
 alias chomp="perl -pe 's/\n/ /'"
+
+alias mountdvd='sudo mount -t iso9660 /dev/cdrw /media/romain/dvd'
+
+# alias cdtw="cd ~/tw/DEV_PJXP/tinawebJS"
+#TODO git-archive like this
+# git archive --prefix "polito_tina_1.2" HEAD | gzip > ../polito_tina_1.2.tgz
